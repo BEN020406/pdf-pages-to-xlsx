@@ -1,0 +1,15 @@
+# 统一换行：仓库内一律 LF，Windows 检出时也不自动改成 CRLF，
+# 否则每次改动都会整文件 diff。
+* text=auto eol=lf
+
+# Windows 批处理必须是 CRLF，否则某些环境下不执行
+*.cmd text eol=crlf
+*.bat text eol=crlf
+
+# 二进制
+*.png binary
+*.jpg binary
+*.ico binary
+*.pdf binary
+*.xlsx binary
+*.onnx binary

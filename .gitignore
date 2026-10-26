@@ -1,0 +1,41 @@
+# ---- 不该进仓库的东西 ----
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+
+# 打包产物
+build/
+dist/
+*.spec
+
+# 导出的 Excel / 临时图片（含真实单据截图，绝不能提交）
+out/
+*.xlsx
+!demo_pdfs/*.xlsx
+
+# 样例 PDF 里可能含真实单据 —— 本仓库默认不收录
+# 需要本地跑测试时，自己把 demo_pdfs/ 放回来（见 tests 里的 skip 逻辑）
+demo_pdfs/
+
+# 截图：默认不收（多数是含真实单据的调试产物），只放行纯界面截图
+shot_*.png
+!shot_review.png
+!shot_review_filter.png
+!shot_import.png
+!shot_settings.png
+!shot_export.png
+
+# 本机配置与密钥
+config.json
+*.key
+.env
+
+# 系统
+Thumbs.db
+desktop.ini
+.DS_Store

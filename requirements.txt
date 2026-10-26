@@ -1,0 +1,37 @@
+# 运行依赖（Windows / Python 3.10+，实测 3.13.12）
+#
+# 安装：python -m pip install -r requirements.txt
+# 注意 opencv 必须用 contrib 版：img2table 需要 cv2.ximgproc，
+# 普通 opencv-python / opencv-python-headless 没有这个子模块，
+# 会直接报 "module 'cv2' has no attribute 'ximgproc'"。
+
+# GUI
+PyQt5==5.15.11
+PyQt-Fluent-Widgets==1.11.3
+
+# PDF 解析
+PyMuPDF==1.27.2.3
+pdfplumber==0.11.9
+pypdfium2==5.7.0          # img2table 读图
+camelot-py==2.0.0        # 仅旧版命令行脚本用
+
+# OCR
+rapidocr==3.10.0         # 自带 PP-OCRv6 det/rec/cls ONNX 模型
+onnxruntime==1.20.1
+numpy==2.4.3
+
+# 版式还原（按表格线切单元格）
+img2table==2.0.0
+opencv-contrib-python-headless==5.0.0.93
+
+# Excel
+openpyxl==3.1.2
+xlsxwriter==3.2.9
+beautifulsoup4==4.14.3   # img2table 解析 HTML 表格
+
+# 繁简折叠（按标题搜索时用）
+zhconv==1.4.3
+
+# 其他
+pywin32==311             # DPAPI 加密存 API Key
+darkdetect==0.8.0
