@@ -12,11 +12,12 @@
 
 ### 方式一：直接用 exe（不需要装 Python）
 
-1. 到 [Releases](../../releases) 下载 `PDF取页转Excel.zip`（约 210 MB）
+1. 到 [Releases](../../releases) 下载 `pdf-pages-to-xlsx-v0.3.0-win64.zip`（约 210 MB）
 2. 解压到任意目录
 3. 双击 `PDF取页转Excel.exe`
 
 > 首次启动会加载 OCR 模型，约 2 秒。
+> 未做代码签名，Windows 可能弹「已保护你的电脑」——点「更多信息」→「仍要运行」。
 
 ### 方式二：从源码运行
 
